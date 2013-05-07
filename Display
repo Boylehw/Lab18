@@ -1,0 +1,47 @@
+import javax.swing.*;
+
+import java.util.*;
+
+public class Diplay {
+  static String Again;
+  static String MaxNString;
+  static String MaxRolls;
+  
+  
+  public static void main(String[] args) {
+  	
+  	
+  	
+  	
+  	Dice ThisDice = new Dice();
+  	
+  	do{
+  		
+  String Choice = 
+  		JOptionPane.showInputDialog("Would you like to roll \n1- Roll a 1-6 dice\n2- Choose the max value of the dice");
+  
+  
+  
+  if (Choice.equalsIgnoreCase("2")){
+  
+  	MaxNString = JOptionPane
+  			.showInputDialog("What would you like for the maximum number on the dice?");
+
+  	int MNumber = Integer.parseInt(MaxNString);
+  	int SDisplayNumbers=ThisDice.RollDice(MNumber);
+  	JOptionPane.showMessageDialog(null, "You rolled your dice: "+ThisDice.SRollCount+" times");
+  }
+  else{		
+  	
+  	int DisplayNumbers= ThisDice.RollDice();
+  	JOptionPane.showMessageDialog(null, "You rolled your dice: "+ThisDice.RollCount+" times");
+  }
+  	
+  	Again = JOptionPane
+  			.showInputDialog(" Would you like to try again? Y/N: ");
+  	
+  	
+  	} while (Again.equalsIgnoreCase("Y"));
+  	
+  }
+  }
