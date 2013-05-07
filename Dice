@@ -1,0 +1,44 @@
+import javax.swing.*;
+import java.util.*;
+
+@SuppressWarnings("unused")
+public class Dice {
+
+  static int SRollCount;
+  int RollCount;
+  int Roll;
+  private static int MNumber;
+  static int SRoll;
+  static int LoopCounter;
+  static int MRoll;
+  
+
+  public static int RollDice(int MNumber) {
+  
+  		
+  		
+  	Random generator = new Random();
+  	int MaxNumber = MNumber;// highest possible roll on dice
+  	SRoll = generator.nextInt(MaxNumber) + 1;// roll
+  	SRollCount++;
+  	JOptionPane.showMessageDialog(null, "You rolled: "+ SRoll);
+  	return SRoll;
+  
+  }
+  
+
+  public int RollDice() {
+  
+
+  	Random generator = new Random();
+  	Roll = generator.nextInt(6) + 1;// roll
+  	RollCount++;
+  	JOptionPane.showMessageDialog(null, "You rolled: "+ Roll);
+  	return Roll;
+
+  }
+
+
+
+
+}
